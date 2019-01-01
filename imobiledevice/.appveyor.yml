@@ -1,0 +1,10 @@
+environment:
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+
+build_script: 
+  - python tools/Build.py
+
+artifacts:
+  - path: artifacts/win64_release
+    name: imobiledevice

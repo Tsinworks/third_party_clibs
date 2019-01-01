@@ -1,0 +1,5 @@
+*.pyc
+build/
+pcre2/doc/
+pcre2/testdata/
+/bin

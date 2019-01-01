@@ -1,0 +1,15 @@
+environment:
+  ANDROID_NDK_HOME: C:/android-ndk-r15c
+  ANDROID_HOME: C:/android-sdk-windows
+  VS150COMNTOOLS: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/Tools/
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    
+#before_build: tools/appveyor/install_android.bat
+
+build_script: 
+  - python ci.py
+
+artifacts:
+  - path: build/third_party_clibs_windows_shared.zip
+  - path: build/third_party_clibs_windows_static.zip
